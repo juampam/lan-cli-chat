@@ -11,8 +11,8 @@
 $ sudo apt install openssh-server
 $ sudo systemctl start ssh
 ```
-3. create a user called noc and set "Zeyx5aJw" for the password, (You can change these parameters but is easier let the names)
-4. move the [app](https://github.com/juampam/lan-cli-chat/blob/master/app), [chdb](https://github.com/juampam/lan-cli-chat/blob/master/chdb) and [chdbs](https://github.com/juampam/lan-cli-chat/blob/master/chdbs) files to your server, then execute 
+2. create a user called _noc_ and set _"Zeyx5aJw"_ for the password, (You can change these parameters)
+3. move the [app](https://github.com/juampam/lan-cli-chat/blob/master/app), [chdb](https://github.com/juampam/lan-cli-chat/blob/master/chdb) and [chdbs](https://github.com/juampam/lan-cli-chat/blob/master/chdbs) files to your server, then execute 
 ```bash
 ./app.sh
 ```
