@@ -16,4 +16,10 @@ $ sudo systemctl start ssh
 ```bash
 ./app.sh
 ```
-to run the aplication.
+--- 
+# Next Realese coming soon!
+## Changes
+- To Create a server, just run a script and fill some changes
+- A mistery user has been the control of the chat 😨
+- Change your name, change your color every times you want.
+
