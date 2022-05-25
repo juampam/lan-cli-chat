@@ -19,7 +19,7 @@ $ sudo systemctl start ssh
 --- 
 # Next Realese coming soon!
 ## Changes
-- To Create a server, just run a script and fill some changes
+- To Create a server, just run a script and anawer some questions!
 - A mistery user has been the control of the chat 👻
 - Change your name, change your color every times you want.
 
