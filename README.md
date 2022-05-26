@@ -24,6 +24,6 @@ $ sudo systemctl start ssh
 - Change your name, change your color every times you want.
 --- 
 # Developer Notes
-- Commit only the code whitot be compiled
-- Create a install script from server and another from the client
-- In the install script, the files will be compiled
+- Commit only the compiled code, this to avoid compilation problems.
+- Create a install script from server and another from the client.
+- In the server script, add options to provide any name.
