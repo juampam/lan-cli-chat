@@ -22,4 +22,8 @@ $ sudo systemctl start ssh
 - To Create a server, just run a script and anawer some questions!
 - A mistery user has been the control of the chat 👻
 - Change your name, change your color every times you want.
-
+--- 
+# Developer Notes
+- Commit only the code whitot be compiled
+- Create a install script from server and another from the client
+- In the install script, the files will be compiled
