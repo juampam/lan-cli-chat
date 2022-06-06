@@ -1,4 +1,5 @@
 # lan-cli-chat
+## Currently version do not work!
 ## Usage
 1. You can use any GNU/Linux distribution for your server
 2. Use the [connect](https://github.com/juampam/lan-cli-chat/blob/master/connect) script to connect automatically to the server by SSH.
