@@ -3,7 +3,7 @@ import string
 import os
 
 def get_random_string(length):
-    path = "./dkgo"
+    path = "./.k"
     # choose from all lowercase letter
     letters = string.ascii_lowercase
     result_str = ''.join(random.choice(letters) for i in range(length))
