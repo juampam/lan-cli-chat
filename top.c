@@ -6,8 +6,9 @@
 #define gotoxy(x,y) printf("\033[%d;%dH", (y), (x))
 
 int main(int argc, char* argv[0]){
-        int geek = 17;
+        int geek = 2;
         clear();
-        gotoxy(1,3);     
+        gotoxy(1,1); 
+	printf("Hola");
 }
         

@@ -1,46 +1,46 @@
 #!/bin/bash
 
+#COLORS
+
+NC='\033[0m'       # Text Reset
+
+# Regular Colors
+Black='\033[0;30m'        # Black
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Yellow='\033[0;33m'       # Yellow
+Blue='\033[0;34m'         # Blue
+Purple='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+White='\033[0;37m'        # White
+
+
 destdir="./database.log"
 n="0"
 key=$(python3 ./key.py)
 variable=$(tput lines)
+shit=$(wc -l $destdir)
 
-cat << EOF > someinc.c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#define clear() printf("\033[H\033[J")
-#define gotoxy(x,y) printf("\033[%d;%dH", (y), (x))
+IFS=' '
+read -a strarr <<< "$shit"
+xd=${strarr[0]}
+#echo $xd
 
-int main(int argc, char* argv[0]){
-        int geek = $variable;
-        clear();
-        gotoxy(1,geek);     
-}
-        
-EOF
+echo "Select your color"
+read color
 
-gcc someinc.c -o some
-chmod 770 some
 
 read -p 'Username: ' uservar
-dd=$(echo $uservar:)
 while [ $n -le 1 ]
 do
-	./some
 	IFS= read -p $uservar: message
 	echo $message
-	read message
-	if [$message == "/exit"]
-	then
-		n=450
-	fi
 	if [ -f "$destdir" ]
 	then 
-    		echo "$uservar: $message" >> "$destdir"
+ 		echo -e ${Red}$uservar:${NC} $message >> "$destdir"
 	fi
-	clear
+clear
+
 done
 
 
