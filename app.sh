@@ -25,7 +25,7 @@ IFS=' '
 read -a strarr <<< "$shit"
 xd=${strarr[0]}
 #echo $xd
-
+cat colors
 echo "Select your color"
 read color
 
@@ -37,7 +37,7 @@ do
 	echo $message
 	if [ -f "$destdir" ]
 	then 
- 		echo -e ${Red}$uservar:${NC} $message >> "$destdir"
+		echo -e "$(tput setaf $color)$uservar:$(tput setaf 7)$message" >> "$destdir"
 	fi
 clear
 
