@@ -21,10 +21,29 @@ key=$(python3 ./key.py)
 variable=$(tput lines)
 shit=$(wc -l $destdir)
 
+
+
+
+
+
+
 IFS=' '
 read -a strarr <<< "$shit"
 xd=${strarr[0]}
 #echo $xd
+
+# -- CENTER --- 
+
+
+local str width height length
+        
+width=$(tput cols)
+height=$(tput lines)
+str="Width = $width Height = $height"
+length=${#str}
+clear
+tput cup $((height / 2)) $(((width / 2) - (length / 2)))
+
 cat colors
 echo "Select your color"
 read color
@@ -37,7 +56,7 @@ do
 	echo $message
 	if [ -f "$destdir" ]
 	then 
-		echo -e "$(tput setaf $color)$uservar:$(tput setaf 7)$message" >> "$destdir"
+		echo -e "$(tput setaf $color)$uservar:$(tput sgr 0)$message" >> "$destdir"
 	fi
 clear
 
